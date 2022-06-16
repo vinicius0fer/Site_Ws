@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br" >
+
+<head>
+    <title>Wesley Safadão</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="imagens/logo_ws.png" type="image/x-icon">
+    
+    <link rel="stylesheet" href="plugins/jquery.bxslider.css">
+    <link rel="stylesheet" href="plugins/magnific-popup.css">
+    <script src="plugins/jquery.min.js"></script>
+    <script src="plugins/jquery.bxslider.min.js"></script>
+    <script src="plugins/jquery.magnific-popup.js"></script>
+
+  <script>
+    $(document).ready(function(){
+      $('.slider').bxSlider({
+          mode: 'horizontal',
+          captions:true,
+          //sliderwidth: 800,
+          auto: true,
+          pager: true,
+          //speed: 100,
+          //controls: true,
+        });
+    $('#galeria-fotos').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title') ;
+			}
+		},
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	    });
+    });
+  </script>
+
+    </head>
+
+    <body>
+
+        <header id="cabecalho">
+            <div class="container">
+                <img src="imagens/ws_logo.png" id="logo">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">INICIO</a></li>
+                        <li><a href="internas/projetos_musicais.html">PROJETOS MUSICAIS</a></li>
+                        <li><a href="internas/foto_wesley_safadao.html">FOTOS WESLEY SAFADÃO</a></li>
+                        <li><a href="internas/videos.html">VIDEOS</a></li>
+                        <li><a href="https://wesleysafadao.com.br/" target="_blank">SITE OFICIAL</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+    <section id="banners">
+        <div class="container">
+            <h2>Wesley Safadão</h2>
+            <ul class="slider">
+                <li><img src="imagens/banners/ws_1.jpg"></li>
+                <li><img src="imagens/banners/ws_2.jpg"></li>
+                <li><img src="imagens/banners/ws_3.jpg"></li>
+            </ul>
+        </div>
+    </section>
+
+   
+
+    <footer id="rodape">
+        <p>Site construído como projeto da disciplina de Introdução a Tecnologia Web pelo aluno Vinícius Fernandes 1º périodo do curso de Sistema de Informação do UniRios. </p>
+        <p><a href="https://wesleysafadao.com.br/">wesley Safadão</a></p>
+    </footer>
+</body>
+
+</html>
